@@ -11,8 +11,8 @@ An evidence-based cybersecurity lab exercise documenting passive reconnaissance 
 | Field | Details |
 | :--- | :--- |
 | **Prepared By** | Praful Vadar |
-| **Assessment Date** | 9 November 2026 |
-| **Report Date** | 9 November 2026 |
+| **Assessment Date** | 12 November 2026 |
+| **Report Date** | 12 November 2026 |
 | **Modules Covered** | **PM4:** Footprinting & Reconnaissance with `theHarvester`<br>**PM5:** Network Scanning & Host Discovery with Zenmap / Nmap |
 | **Lab Environment** | Kali Linux + Windows 11 on Oracle VirtualBox |
 | **Network Scope** | `10.0.0.0/24` |
