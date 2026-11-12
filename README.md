@@ -51,7 +51,7 @@ This lab demonstrates foundational reconnaissance and host enumeration workflows
 * **Target Tested:** `microsoft.com`
 * **Initial Invocation:** Launching `theHarvester` without required flags displayed standard CLI usage output, followed by an `-b all` run showing missing API key notices for third-party sources.
 
-![Initial theHarvester run in Kali Linux](evidence/01-kali-theharvester-initial-run.png)
+![Initial theHarvester run in Kali Linux]
 
 * **Baidu Source Query:**
   ```bash
@@ -59,7 +59,11 @@ This lab demonstrates foundational reconnaissance and host enumeration workflows
   ```
 * **Result:** Returned **0 IPs, 0 emails, 0 people**, and **3 hosts** (`c.urs.microsoft.com`, `copilot.microsoft.com`, `hxd.research.microsoft.com`).
 
-![Completed theHarvester Baidu run in Kali Linux](evidence/08-kali-theharvester-final-run.png)
+![Completed theHarvester Baidu run in Kali Linux]
+<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/8fe0cb8c-2f58-4e8f-b893-159964cbe01c" />
+<img width="1917" height="1020" alt="Screenshot 2026-11-12 014008" src="https://github.com/user-attachments/assets/d287a0e6-53f3-4f0b-be4e-dfca08ccf793" />
+
+
 
 ---
 
@@ -78,11 +82,12 @@ Network parameters were verified on the Windows 11 guest (`window11vm`) via Comm
 | **DHCP Server** | `10.0.0.2` |
 | **DNS Servers** | `8.8.8.8`, `8.8.4.4` |
 
-![Windows Command Prompt ipconfig output](evidence/02-windows-ipconfig.png)
+![Windows Command Prompt ipconfig output]
+<img width="1917" height="1020" alt="Screenshot 2026-11-12 021104" src="https://github.com/user-attachments/assets/74bd651e-8440-4a22-89ca-db356b29b2d5" />
 
-![Windows 11 VirtualBox console view](evidence/03-windows11-virtualbox-console.png)
+![Windows PowerShell ipconfig /all output]
+<img width="1031" height="772" alt="Screenshot 2026-11-12 023442" src="https://github.com/user-attachments/assets/0c695525-1910-4fcf-8fad-857d52746304" />
 
-![Windows PowerShell ipconfig /all output](evidence/07-windows-ipconfig-all.png)
 
 ---
 
@@ -101,13 +106,15 @@ Network parameters were verified on the Windows 11 guest (`window11vm`) via Comm
 | `10.0.0.2` | `08:00:27:B0:EF:2A` | Oracle VirtualBox virtual NIC (`0.0051s` latency); DHCP server per Windows config |
 | `10.0.0.4` | *Not shown in Nmap* | Matches the local Windows 11 VM IPv4 address |
 
-![Zenmap ping scan inside VirtualBox console](evidence/04-zenmap-ping-scan.png)
+![Zenmap ping scan inside VirtualBox console]
+<img width="1917" height="1022" alt="Screenshot 2026-11-12 021829" src="https://github.com/user-attachments/assets/b49a549d-caa2-4b98-8057-ab379fd19066" />
 
-![Zenmap detailed host discovery output](evidence/06-zenmap-host-discovery-details.png)
 
 * **Network Topology:** Zenmap's topology graph visualizes the three responding nodes (`10.0.0.1`, `10.0.0.2`, and `10.0.0.4`) connected to `localhost`.
 
-![Zenmap network topology view and legend](evidence/05-zenmap-topology.png)
+![Zenmap network topology view and legend]
+<img width="1917" height="1020" alt="Screenshot 2026-11-12 022233" src="https://github.com/user-attachments/assets/5d893845-96ac-454a-9ded-81f221ed8548" />
+
 
 ---
 
@@ -125,33 +132,3 @@ Network parameters were verified on the Windows 11 guest (`window11vm`) via Comm
 * Findings are informational baseline observations; no CVSS scores are assigned.
 
 ---
-
-## 📁 Repository Structure & Evidence Mapping
-
-Place your uploaded screenshots into the `evidence/` folder using the filenames below so all Markdown image links render automatically on GitHub:
-
-```text
-.
-├── README.md
-├── Footprinting-and-Network-Scanning-Lab-Report.pdf
-└── evidence/
-    ├── 01-kali-theharvester-initial-run.png
-    ├── 02-windows-ipconfig.png
-    ├── 03-windows11-virtualbox-console.png
-    ├── 04-zenmap-ping-scan.png
-    ├── 05-zenmap-topology.png
-    ├── 06-zenmap-host-discovery-details.png
-    ├── 07-windows-ipconfig-all.png
-    └── 08-kali-theharvester-final-run.png
-```
-
-| Evidence ID | Repository Path | Original Screenshot File | Description |
-| :--- | :--- | :--- | :--- |
-| **Evidence 01** | `evidence/01-kali-theharvester-initial-run.png` | `Screenshot 2026-11-12 014008.jpg` | Initial `theHarvester` CLI launch and `-b all` API key notices in Kali Linux |
-| **Evidence 02** | `evidence/02-windows-ipconfig.png` | `Screenshot 2026-11-12 020807.png` | Windows Command Prompt showing basic `ipconfig` output (`10.0.0.4`) |
-| **Evidence 03** | `evidence/03-windows11-virtualbox-console.png` | `Screenshot 2026-11-12 021104.png` | Full VirtualBox console view of the Windows 11 VM network check |
-| **Evidence 04** | `evidence/04-zenmap-ping-scan.png` | `Screenshot 2026-11-12 021829.png` | Zenmap GUI running `nmap -sn 10.0.0.0/24` inside VirtualBox |
-| **Evidence 05** | `evidence/05-zenmap-topology.png` | `Screenshot 2026-11-12 022233.png` | Zenmap Topology tab and legend displaying the 3 active hosts |
-| **Evidence 06** | `evidence/06-zenmap-host-discovery-details.png` | `Screenshot 2026-11-12 022454.png` | Detailed Nmap host discovery output showing MAC addresses and latencies |
-| **Evidence 07** | `evidence/07-windows-ipconfig-all.png` | `Screenshot 2026-11-12 023442.png` | Windows PowerShell `ipconfig /all` output showing DHCP, DNS, and MAC details |
-| **Evidence 08** | `evidence/08-kali-theharvester-final-run.png` | `image_19598f.jpg` | Completed `theHarvester -d microsoft.com -l 1000 -b baidu` output (3 hosts found) |
