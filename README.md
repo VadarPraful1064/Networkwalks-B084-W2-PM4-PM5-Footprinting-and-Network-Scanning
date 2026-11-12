@@ -26,7 +26,7 @@ This lab demonstrates foundational reconnaissance and host enumeration workflows
 
 | Module | Activity | Target |
 | :--- | :--- | :--- |
-| **PM1 / PM4** | Passive Footprinting / OSINT tool practice | `microsoft.com` (`theHarvester` CLI test only) |
+| **PM4** | Passive Footprinting / OSINT tool practice | `microsoft.com` (`theHarvester` CLI test only) |
 | **PM5** | Local network scanning & active host discovery | `10.0.0.0/24` |
 
 ---
